@@ -1,0 +1,7 @@
+{
+  "name": "BanglaGenius Tutor",
+  "description": "An AI-powered educational platform for Class 1-10. Upload PDF textbooks, use a magic pen to mark problems, and talk to a real-time AI tutor who sees your screen and explains concepts in Bengali.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
