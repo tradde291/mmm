@@ -89,7 +89,7 @@ export class LiveService {
              this.config.onTranscription('', 'ai', true);
           }
           
-          if (message.toolCall) {
+          if (message.toolCall?.functionCalls) {
             for (const fc of message.toolCall.functionCalls) {
               if (fc.name === 'getPageText') {
                 this.sessionPromise?.then(session => {
