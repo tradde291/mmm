@@ -89,8 +89,9 @@ export class LiveService {
              this.config.onTranscription('', 'ai', true);
           }
           
-          if (message.toolCall?.functionCalls) {
-            for (const fc of message.toolCall.functionCalls) {
+          const toolCall = message.toolCall;
+          if (toolCall?.functionCalls) {
+            for (const fc of toolCall.functionCalls) {
               if (fc.name === 'getPageText') {
                 this.sessionPromise?.then(session => {
                     session.sendToolResponse({
